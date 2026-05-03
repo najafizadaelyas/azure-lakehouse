@@ -1,3 +1,14 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+    }
+    databricks = {
+      source = "databricks/databricks"
+    }
+  }
+}
+
 # ── Workspace ──────────────────────────────────────────────────────────────────
 resource "azurerm_databricks_workspace" "ws" {
   name                = "dbw-${var.name_prefix}"
